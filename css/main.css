@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+:root{
+  --mainBlue:rgb(43, 121, 170);
+  --transparentBlue:rgba(64, 172, 241,0.7);
+  --mainWhite:#FFFFFF;
+  --mainBlack:rgb(48, 50, 63);
+  --mainGrey:rgb(216, 214, 214);
+  --mainYellow:#e2c242;
+}
+
+
+body{
+  font-family: 'Roboto', sans-serif;
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+}
+/* section title */
+.section-title--special{
+  background: var(--mainYellow);
+  color: var(--mainBlack);
+  padding: 0.5rem 2rem;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%,0 100%);
+}
+/* section title */
+.section-title--speciale{
+  text-align: center;
+  font-size:18px;
+  background: var(--mainBlack);
+  color: var(--mainWhite);
+  padding: 0.5rem 2rem;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%,0 100%);
+}
+
+/* preloader */
+.preloader{
+  position: fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background: var(--mainWhite);
+  z-index: 999;
+}
+.hidePreloader{
+  display: none!important;
+}
+
+/* navbar */
+.navbar{
+  background: var(--mainWhite);
+  transition:all 0.5s ease-in
+;}
+.navbar-change{
+  position:fixed;
+  width: 100%;
+  padding: 1rem;
+  background: var(--mainYellow);
+  z-index: 100;
+
+}
+.navbar-icon{
+  font-size: 2rem;
+  color: var(--mainBlue);
+}
+.navbar-toggler{
+  outline-color: var(--mainBlack)!important;
+}
+.nav-item {
+  font-size: 1.3rem;
+}
+.nav-link{
+  color: var(--mainBlack);
+  text-transform: capitalize;
+}
+.nav-link:hover{
+  color: var(--mainBlue);
+}
+.nav-icon{
+  font-size: 1.5rem;
+  color: var(--mainBlack);
+  text-decoration: none!important;
+  transition-property: color;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+}
+.nav-icon:hover{
+  color: var(--mainYellow);
+}
+h5{
+  color: var(--mainBlack);
+  font-size: 18px;
+}
+#log{
+  margin-left:20px;
+}
+
+/* header */
+.header{
+  color:var(--mainwhite);
+  overflow: hidden;
+}
+.height-max{
+  min-height: calc(90vh - 56px);
+  background:url('../img/headerdeux.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.title-heading{
+  background: rgba(0, 0, 0, 0.5);
+  border-left: 0.3rem solid var(--mainWhite);
+}
+.title{
+  font-weight: 700;
+  font-size: 3.9rem;
+}
+
+@media screen and (min-width:768px){
+  .title{
+    font-size: 3rem;
+}}
+
+.icons{
+  font-size: 8rem;
+  padding-left: 10rem;
+  color: var(--mainblack);
+  }
+  .row{
+    padding-left: 20px;
+  }
+  h2, h3{
+    color: var(--mainBlack);
+  }
+  .col{
+    text-align: end;
+  }
+  
+  
+  .title-icon{
+    color: var(--mainWhite);
+    text-decoration: none!important;
+  }
+  .title-icon:hover{
+    color: var(--mainBlue);
+    opacity: 0.6;
+  }
+
+
+/* our services */
+.question{
+  background: url('../img/webetmobile.jpg')center/cover fixed no-repeat;
+}
+.question-grey{
+  background: rgba(79,109,122,0.75);
+}
+.question-yellow{
+  background: rgba(235, 190, 40, 0.568);
+}
+.question-icon{
+  font-size: 4rem;
+  color: var(--mainBlack);
+  transition: all 0.5s ease-in-out;
+}
+.question-icon:hover{
+transform: translateY(-10%);
+color: var(--mainwhite);
+}
+.question-info{
+  color:var(--mainWhite);
+  line-height: 50px;
+}
+
+p{
+  text-align: justify;
+  color:var(--mainBlack);
+}
+
+/* technologies  */
+.gallery-item{
+  background: var(--mainYellow);
+  position: relative;
+  cursor: pointer;
+}
+.gallery-img{
+  transition: all 1s ease-in-out;
+}
+.gallery-item:hover .gallery-img{
+opacity: 0.5;
+}
+.gallery-item::after{
+  content: "";
+  position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ outline: 0.5rem solid var(--mainWhite);
+ outline-offset: -2rem;
+ transition: all 1s ease-in-out;
+ transform: scale(0);
+}
+.gallery-item:hover:after{
+  transform: scale(1);
+}
+/* modal */
+.showcase{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: var(--transparentBleu);
+  display: none;
+}
+.showcase-close{
+  font-size: 2rem;
+  color: var(--mainBlue);
+}
+.showcase-show{
+  display: flex;
+}
+
+/* end of modal */
+
+/* contact section */
+.contact{
+  background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('')center/cover fixed no-repeat;
+}
+.contact-input{
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  background: transparent;
+  border-color: var(--mainBlue);
+  color: var(--mainBlue)!important;
+}
+.contact-input::placeholder{
+  color: var(--mainBlue);
+}
+.contact-input:focus{
+  background: transparent;
+  border-color: var(--mainBlue);
+}
+.contact-btn{
+  text-transform: uppercase;
+  color: var(--mainBlue);
+  border-color: var(--mainBlue);
+}
+.contact-btn:hover{
+  background: var(--mainBlue);
+  color: var(--mainBlack);
+}
+
+/* footer icons */
+.footer{
+background: var(--mainWhite);
+}
+.footer-icon{
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--mainBalck);
+  transition: all 1s ease-in-out;
+}
+.footer-icon:hover{
+  color: var(--mainYellow);
+}
+
+/* contact process */
+.btn{
+  margin: auto;
+  float: right;
+}
